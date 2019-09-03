@@ -2,13 +2,14 @@ package snackbar;
 
 public class Customer{
     private static int maxId = 0;
-
+    private int id;
     private String name;
-    private double cash;
+    private double cashOnHand;
 
     //constructor
     public Customer(String name, double cash){
         maxId++;
+        id = maxId;
         this.name = name;
         this.cashOnHand = cashOnHand;
     }
@@ -21,7 +22,7 @@ public class Customer{
         this.name = name;
     }
 
-    public double getcashOnHand(){
+    public double getCashOnHand(){
         return cashOnHand;
     }
     

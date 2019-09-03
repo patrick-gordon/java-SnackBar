@@ -44,8 +44,8 @@ public class Snack {
     //     this.quantity = quantity;
     // }
 
-    public double getCost() {
-        return cost;
+    public double getCost(int quantity) {
+        return quantity * cost;
     }
     public void setCost(double cost){
         this.cost = cost;
@@ -59,14 +59,12 @@ public class Snack {
     }
 
     //regular meathods
-    public void totalCost(int){
-
-    }
-
+   
     public void buySnack(int quantity){
         this.quantity -= quantity;
     }
 
     public void addQuantity(int quantity){
         this.quantity += quantity;
+}
 }
