@@ -8,7 +8,7 @@ public class VendingMachine {
     //constructor
     public VendingMachine(String name){
         maxId++;
-        this.id = maxId;
+        id = maxId;
         this.name = name;
     }
 
@@ -16,9 +16,6 @@ public class VendingMachine {
 
     public int getId(){
         return id;
-    }
-    public setId(int id){
-        this.id = id;
     }
 
     public String getName(){

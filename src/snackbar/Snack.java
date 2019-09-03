@@ -26,6 +26,10 @@ public class Snack {
         return id;
     }
 
+    public void setId(){
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
@@ -55,15 +59,14 @@ public class Snack {
     }
 
     //regular meathods
-    public void totalCost(){
+    public void totalCost(int){
 
     }
 
-    public void buySnack(){
-
+    public void buySnack(int quantity){
+        this.quantity -= quantity;
     }
 
-    public void addQuantity(){
-        
-    }
+    public void addQuantity(int quantity){
+        this.quantity += quantity;
 }

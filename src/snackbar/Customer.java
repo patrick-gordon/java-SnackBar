@@ -10,7 +10,7 @@ public class Customer{
     public Customer(String name, double cash){
         maxId++;
         this.name = name;
-        this.cash = cash;
+        this.cashOnHand = cashOnHand;
     }
 
     //meathods
@@ -21,10 +21,16 @@ public class Customer{
         this.name = name;
     }
 
-    public double getCash(){
-        return cash;
+    public double getcashOnHand(){
+        return cashOnHand;
     }
-    public void setCash(double cash) {
-        this.cash = cash;
+    
+    public void addCashOnHand(double cash) {
+        this.cashOnHand += cash;
+    }
+    
+    public void buySnack(int quantity, Snack snack){
+        snack.buySnack(quantity);
+        this.cashOnHand -= snack.getCost(quantity);
     }
 }
